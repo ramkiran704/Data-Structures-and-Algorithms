@@ -1,7 +1,6 @@
 #include<stdio.h>
 #include<ctype.h>
 #include<math.h>
-
 char stack[50];
 int top=-1;
 char estack[50];
@@ -9,19 +8,15 @@ int etop=-1;
 void push( char c ){	
 	stack[++top]=c;
 }
-
 char pop(){	
 	return stack[top--];
 }
-
 void epush( int v){	
 	estack[++etop]=v;
 }
-
 int epop(){	
 	return estack[etop--];
 }
-
 int precedence(char op){	
 	if (op=='^')
 		return 3;
@@ -31,11 +26,9 @@ int precedence(char op){
 		return 1;
 	return 0;
 }
-
 int isoperator(char c){	
 	return (c=='+' || c=='-' || c=='*' || c=='/' || c=='^');
 }
-
 void infix_postfix(char infix[], char postfix[])
 {	int i,k=0;
 	char c;
@@ -65,7 +58,6 @@ void infix_postfix(char infix[], char postfix[])
 	}
 	postfix[k]='\0';
 }
-
 int evaluate(char postfix[])
 {	int i,op1,op2,result;
 	for (i=0;postfix[i]!='\0';i++)
@@ -92,7 +84,6 @@ int evaluate(char postfix[])
 	}
 	return epop();
 }
-
 int main()
 {	char infix[50],postfix[50];
 	printf("enter infix expression: ");
