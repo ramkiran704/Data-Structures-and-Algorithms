@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-#define SIZE 10   // maximum heap size
+#define SIZE 10   
 
 void swap(int *a, int *b) {
     int temp = *a;
