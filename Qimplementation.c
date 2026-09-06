@@ -4,6 +4,7 @@ int rear=-1;
 int front=-1;
 int a[Size];
 
+
 void Enqueue(int item){
     if(rear==Size-1)
     printf("Q is Full\n");
